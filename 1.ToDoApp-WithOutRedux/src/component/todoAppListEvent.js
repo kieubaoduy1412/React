@@ -16,13 +16,13 @@ class ListEventTable extends Component{
     render(){
         var row = [];
 
-        // for (let index = 0; index < this.state.listEvent.length; index++) {
-        //     for (let i = 0; i < this.props.removeEventListItem.length ; i++){
-        //         if(this.state.listEvent[index].id === this.props.removeEventListItem[i]){
-        //             this.state.listEvent[index].isShow = false
-        //         }
-        //     }
-        // }
+        for (let index = 0; index < this.state.listEvent.length; index++) {
+            for (let i = 0; i < this.props.removeEventListItem.length ; i++){
+                if(this.state.listEvent[index].id === this.props.removeEventListItem[i]){
+                    this.state.listEvent[index].isShow = false
+                }
+            }
+        }
 
         for (let index = 0; index < this.state.listEvent.length; index++) {
             if(this.state.listEvent[index].title.match(this.props.searchText) && this.state.listEvent[index].isShow == true){
