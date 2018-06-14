@@ -12,17 +12,18 @@ class TodoApp extends Component{
             searchText : "",
             removeEventListItem : []
         }
-        this.functionOnChangeSearchText = this.functionOnChangeSearchText.bind(this)
         this.functionRemoveEvent = this.functionRemoveEvent.bind(this)
         this.functionaddNewEvent = this.functionaddNewEvent.bind(this)
     }
 
-    functionOnChangeSearchText(searchTextValue){
+    // Arrow function not use bind
+    functionOnChangeSearchText = (searchTextValue) => {
         this.setState({
             searchText : searchTextValue
         });
     }
 
+    // Normal function use bind
     functionRemoveEvent(id){
         var temp = this.state.removeEventListItem;
         temp.push(id)
