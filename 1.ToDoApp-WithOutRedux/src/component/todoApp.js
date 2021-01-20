@@ -55,7 +55,7 @@ class TodoApp extends Component{
                     addNewEvent = {this.functionaddNewEvent}
                 />
                 <div className="message-alert">
-                    <h3>Click event to delete update</h3>
+                    <h3>Click event to delete</h3>
                 </div>
                 <ListEventTable 
                     listEvent = {this.state.listEvent}
